@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 const postRequest = require('../database/models/post');
 
-mongoose.connect('mongodb://localhost/node-js-blog');
+mongoose.connect('mongodb://localhost/node-js-blog', {useNewUrlParser: true});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
